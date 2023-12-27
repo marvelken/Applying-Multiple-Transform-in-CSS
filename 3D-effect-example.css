@@ -1,0 +1,42 @@
+/* CSS - styles.css */
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .three-d-effects-example {
+    perspective: 800px; /* Define the perspective for the 3D space */
+  }
+  
+  .cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    /* Apply initial rotation to set the cube at an angle */
+  }
+  
+  .face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #3498db;
+    border: 2px solid #2980b9;
+  }
+  
+  .front { transform: translateZ(50px); }
+  .back { transform: rotateY(180deg) translateZ(50px); }
+  .right { transform: rotateY(90deg) translateZ(50px); }
+  .left { transform: rotateY(-90deg) translateZ(50px); }
+  .top { transform: rotateX(90deg) translateZ(50px); }
+  .bottom { transform: rotateX(-90deg) translateZ(50px); }
+  

@@ -1,0 +1,124 @@
+/* CSS - styles.css */
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Translate Example */
+  .translate-example {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    transform: translate(50px, 20px);
+    /* The element will be moved 50 pixels to the right and 20 pixels down */
+  }
+  
+  /* Rotate example */
+  .rotate-example {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    transform: rotate(45deg);
+    /* The element will be rotated 45 degrees clockwise */
+  }
+  
+  /* Scale example */
+  .scale-example {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    transform: scale(1.5, 0.8);
+    /* The element will be scaled 1.5 times on the X-axis and 0.8 times on the Y-axis */
+  }
+  
+  /* Multiple Forms example */
+  .multiple-transforms-example {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    transform: translate(50px, 20px) rotate(45deg) scale(1.5, 1.5);
+    /* The element will be translated, rotated, and scaled simultaneously */
+  }
+  
+  /* IMPORTANCE OF ORDER OF TRANSFORMATION */
+  .order-of-transforms-example {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    transform: rotate(45deg) translate(50px, 20px);
+    /* The element will be rotated first, then translated */
+  }
+  
+  /* combined-transforms-example */
+  
+  .combined-transforms-example {
+    width: 100px;
+    height: 58px; /* Height of a regular hexagon */
+    background-color: #9b59b6;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transform: rotate(45deg) scale(1.5, 1);
+    /* Combine rotate and scale transformations */
+    transform-origin: 50% 50%;
+    /* Adjust the transformation origin to the center of the hexagon */
+  }
+  
+  /* skew example */
+  .skew-example {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    transform: skew(30deg, 20deg);
+    /* Skew the element by 30 degrees along the X-axis and 20 degrees along the Y-axis */
+  }
+  
+  /* matrix example */
+  .matrix-example {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    transform: matrix(1, 0.5, 0.2, 1, 0, 0);
+    /* Apply a custom matrix transformation */
+  }
+  
+  /* transition example */
+  .transition-example {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+    /* Apply a smooth transition to the scale transformation over 0.5 seconds */
+  }
+  
+  .transition-example:hover {
+    transform: scale(1.5);
+    /* Scale the element to 1.5 times on hover */
+  }
+  
+  /* Animation example with key frames */
+  
+  @keyframes rotateAndScale {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.5);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  .animation-keyframes-example {
+    width: 100px;
+    height: 100px;
+    background-color: #27ae60;
+    animation: rotateAndScale 3s linear infinite;
+    /* Apply the rotateAndScale animation for 3 seconds with linear timing and infinite repeat */
+  }
+  
+  
